@@ -1,0 +1,12 @@
+.DS_Store
+.git
+.github
+README.md
+*.log
+*.aux
+*.out
+*.synctex.gz
+assets/fig/fig_mdp.png
+assets/fig/fig_qualitative_pre_post.png
+assets/images/offroad.png
+assets/images/onroad.png
