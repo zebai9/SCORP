@@ -3,10 +3,10 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Multi-ORFT Project Page (Anonymous)</title>
+    <title>SCORP Project Page</title>
     <meta
       name="description"
-      content="Anonymous project page for Multi-ORFT: stable online reinforcement fine-tuning for multi-agent diffusion planning in cooperative driving."
+      content="Anonymous project page for SCORP: Scene-Consistent Multi-Agent Diffusion Planning With Stable Online Reinforcement Post-Training for Cooperative Driving."
     />
     <link rel="stylesheet" href="styles.css?v=20260310c" />
   </head>
@@ -16,7 +16,7 @@
     <header class="top">
       <div class="container top-inner">
         <div class="badge" aria-label="Anonymity notice">
-          Anonymous project page for peer review
+          SCORP project page
         </div>
         <nav class="nav" aria-label="Page navigation">
           <a href="#overview">Overview</a>
@@ -34,9 +34,7 @@
       <section class="hero reveal" id="overview">
         <div class="container hero-title-wrap">
           <h1 class="hero-title">
-            <span class="smallcaps">Multi-ORFT</span>: Stable Online
-            Reinforcement Fine-Tuning on Diffusion-Based Multi-Agent Planning
-            for Cooperative Driving
+            <span class="smallcaps">SCORP</span>: Scene-Consistent Multi-Agent Diffusion Planning With Stable Online Reinforcement Post-Training for Cooperative Driving
           </h1>
           <p class="hero-subline">
             Scene condition-enhanced diffusion pre-training with stable online
@@ -62,29 +60,28 @@
           </header>
           <div class="card">
             <p class="muted">
-              Closed-loop cooperative driving requires generating multimodal and
-              interaction-realistic multi-agent trajectories while optimizing
-              safety and traffic efficiency. Although diffusion planners
-              pretrained by imitation can capture multimodal interaction
-              realism, they remain weakly aligned with closed-loop cooperative
-              objectives, and <em>stable online</em> reinforcement learning (RL)
-              post-training in reactive multi-agent settings remains
-              challenging. We propose
-              <span class="smallcaps">Multi-ORFT</span>, a scene-consistent and
-              cooperative multi-agent planner that <em>explicitly couples</em>
-              scene condition-enhanced diffusion pre-training with stable online
-              RL post-training. For pre-training, we build a multi-agent
-              denoising network through inter-agent self-attention and dual-path
-              scene conditioning to enhance scene consistency and road adherence
-              of joint trajectories. For post-training, we develop a stable
-              online RL framework that co-designs dense, well-shaped rewards and
-              variance-gated group relative policy optimization (VG-GRPO), thus
-              strengthening safety- and efficiency-oriented cooperative
-              behaviors under closed-loop execution. Extensive experiments
-              demonstrate that Multi-ORFT delivers superior closed-loop planning
-              performance, achieving consistent gains on core safety and
-              efficiency metrics against state-of-the-art open-source baselines
-              on WOMD and alternative post-training paradigms.
+              Cooperative driving is inherently a safety- and efficiency-critical task 
+              that involves coordinating diverse, interaction-realistic multi-agent trajectories. 
+              Existing diffusion-based methods can capture multimodal behaviors from demonstrations, 
+              but they often suffer from weak scene consistency and poor alignment with closed-loop 
+              cooperative objectives. As a result, post-training becomes necessary, yet <em>stable online</em> 
+              post-training in reactive multi-agent environments remains challenging.
+              In this paper, we present <span class="smallcaps">SCORP</span>, <em>a scene-consistent 
+              multi-agent diffusion planner with stable online reinforcement learning (RL) post-training</em> for cooperative driving. 
+              For pre-training, we develop a scene-conditioned multi-agent denoising architecture 
+              that couples inter-agent self-attention with a dual-path conditioning mechanism: 
+              cross-attention provides direct scene-information injection, while AdaLN-Zero enables additional flexible 
+              and stable conditional modulation, thereby improving the scene consistency and road adherence of joint trajectories. 
+              For post-training, we formulate a two-layer Markov decision process (MDP) that explicitly couples the reverse denoising chain 
+              with policy--environment interaction, and we co-design dense, well-shaped planning rewards and variance-gated 
+              group-relative optimization (VG-GRPO) to mitigate advantage collapse and gradient instability during closed-loop training. 
+              Extensive experiments show that SCORP outperforms strong open-source baselines on WOMD, with 10.47\%--28.26\% and 1.70\%--7.22\% 
+              improvements in core safety and efficiency metrics, respectively. Moreover, relative to alternative post-training methods, 
+              SCORP delivers significant and consistent gains in driving safety and traffic efficiency, 
+              highlighting stable and sustained advances in closed-loop cooperative driving.
+
+
+              
             </p>
           </div>
         </div>
@@ -163,7 +160,7 @@
               <div class="group-head demo-showcase-head">
                 <div>
                   <span class="section-kicker">Featured Reel</span>
-                  <h3>Multi-ORFT Showcase Reel</h3>
+                  <h3>SCORP Showcase Reel</h3>
                 </div>
               </div>
               <figure class="media-card demo-reel-card" data-expected-src="assets/videos/multi-orft-demo-reel.mp4">
@@ -550,7 +547,7 @@
                     <td>0.25 ±0.02</td>
                   </tr>
                   <tr class="emph">
-                    <td><span class="smallcaps">Multi-ORFT</span></td>
+                    <td><span class="smallcaps">SCORP</span></td>
                     <td><strong>1.89 ±0.12</strong></td>
                     <td><strong>1.36 ±0.08</strong></td>
                     <td><strong>8.61 ±0.46</strong></td>
@@ -615,7 +612,7 @@
                   </tr>
                   <tr class="emph">
                     <td>
-                      <span class="smallcaps">Multi-ORFT</span> (Online RL)
+                      <span class="smallcaps">SCORP</span> (Online RL)
                     </td>
                     <td><strong>1.89 ±0.12</strong></td>
                     <td><strong>1.36 ±0.08</strong></td>
